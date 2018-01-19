@@ -26,6 +26,9 @@
     
     self.title = @"动画汇总";
     
+    
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    
     [self initAnimationData];
     //animations
     [self.view addSubview:self.tableView];
@@ -39,8 +42,17 @@
     animaiton.nameString = @"果冻刷新动画";
     animaiton.type = animationType_refresh;
     
+    animationModel *qqAnimation = [animationModel new];
+    qqAnimation.classNameStr = @"QQRefresh_animation_View";
+    qqAnimation.nameString = @"QQ刷新动画";
+    qqAnimation.type = animationType_refresh;
     
-    [self.animationList setObject:@[animaiton] forKey:@"refreshAnimation"];
+    animationModel *bossRefreshAnimation = [animationModel new];
+    bossRefreshAnimation.classNameStr = @"bossRefreshView";
+    bossRefreshAnimation.nameString = @"boss刷新动画";
+    bossRefreshAnimation.type = animationType_refresh;
+    
+    [self.animationList setObject:@[animaiton,qqAnimation,bossRefreshAnimation] forKey:@"refreshAnimation"];
     
     animationModel *animaiton1 = [animationModel new];
     animaiton1.classNameStr = @"RaindropView";
@@ -53,7 +65,7 @@
 
 #pragma mark - UITableViewDelegate,UITableViewDataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-   
+    
     return [self.animationList.allKeys count];
 }
 
@@ -102,7 +114,7 @@
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
-   
+    
     static NSString *footerFlag = @"footerFlag";
     
     UITableViewHeaderFooterView *footerView = [tableView dequeueReusableHeaderFooterViewWithIdentifier:footerFlag];
@@ -143,8 +155,11 @@
 - (UITableView *)tableView {
     
     if (!_tableView) {
+        CGRect frame = self.view.frame;
+        frame.origin.y = 64.0;
+        frame.size.height -= 64.0;
         
-        _tableView = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStyleGrouped];
+        _tableView = [[UITableView alloc] initWithFrame:frame style:UITableViewStyleGrouped];
         _tableView.delegate = self;
         _tableView.dataSource = self;
         _tableView.rowHeight = 44.0;

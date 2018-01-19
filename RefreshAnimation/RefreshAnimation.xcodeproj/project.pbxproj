@@ -20,6 +20,9 @@
 		59B9B68E1FC519AF00F1B745 /* RaindropView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B9B68D1FC519AF00F1B745 /* RaindropView.m */; };
 		59B9B6911FC51C3400F1B745 /* RaindropViewLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B9B6901FC51C3400F1B745 /* RaindropViewLayer.m */; };
 		59BA7A811FBBEC12002C34B0 /* CoucltionAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 59BA7A801FBBEC12002C34B0 /* CoucltionAnimation.m */; };
+		59FFFF7A2011CD2600A72D3C /* bossRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59FFFF742011CD2500A72D3C /* bossRefreshView.m */; };
+		59FFFF7B2011CD2600A72D3C /* QQRefreshLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 59FFFF762011CD2500A72D3C /* QQRefreshLayer.m */; };
+		59FFFF7C2011CD2600A72D3C /* QQRefresh_animation_View.m in Sources */ = {isa = PBXBuildFile; fileRef = 59FFFF792011CD2600A72D3C /* QQRefresh_animation_View.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +52,12 @@
 		59B9B6901FC51C3400F1B745 /* RaindropViewLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RaindropViewLayer.m; sourceTree = "<group>"; };
 		59BA7A7F1FBBEC12002C34B0 /* CoucltionAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoucltionAnimation.h; sourceTree = "<group>"; };
 		59BA7A801FBBEC12002C34B0 /* CoucltionAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoucltionAnimation.m; sourceTree = "<group>"; };
+		59FFFF742011CD2500A72D3C /* bossRefreshView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = bossRefreshView.m; sourceTree = "<group>"; };
+		59FFFF752011CD2500A72D3C /* QQRefreshLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QQRefreshLayer.h; sourceTree = "<group>"; };
+		59FFFF762011CD2500A72D3C /* QQRefreshLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QQRefreshLayer.m; sourceTree = "<group>"; };
+		59FFFF772011CD2500A72D3C /* bossRefreshView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bossRefreshView.h; sourceTree = "<group>"; };
+		59FFFF782011CD2500A72D3C /* QQRefresh_animation_View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QQRefresh_animation_View.h; sourceTree = "<group>"; };
+		59FFFF792011CD2600A72D3C /* QQRefresh_animation_View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QQRefresh_animation_View.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +120,12 @@
 				59B9B68D1FC519AF00F1B745 /* RaindropView.m */,
 				59B9B68F1FC51C3400F1B745 /* RaindropViewLayer.h */,
 				59B9B6901FC51C3400F1B745 /* RaindropViewLayer.m */,
+				59FFFF772011CD2500A72D3C /* bossRefreshView.h */,
+				59FFFF742011CD2500A72D3C /* bossRefreshView.m */,
+				59FFFF782011CD2500A72D3C /* QQRefresh_animation_View.h */,
+				59FFFF792011CD2600A72D3C /* QQRefresh_animation_View.m */,
+				59FFFF752011CD2500A72D3C /* QQRefreshLayer.h */,
+				59FFFF762011CD2500A72D3C /* QQRefreshLayer.m */,
 			);
 			path = AnimationView;
 			sourceTree = "<group>";
@@ -197,6 +212,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				594911B11FBAD792002FB7D8 /* ViewController.m in Sources */,
+				59FFFF7A2011CD2600A72D3C /* bossRefreshView.m in Sources */,
 				59B9B6831FC50D9D00F1B745 /* animationModel.m in Sources */,
 				59BA7A811FBBEC12002C34B0 /* CoucltionAnimation.m in Sources */,
 				59B9B6861FC511E700F1B745 /* AnimationViewController.m in Sources */,
@@ -206,7 +222,9 @@
 				594911AE1FBAD792002FB7D8 /* AppDelegate.m in Sources */,
 				59B9B68B1FC517C800F1B745 /* UIView+UIView.m in Sources */,
 				59B9B68E1FC519AF00F1B745 /* RaindropView.m in Sources */,
+				59FFFF7C2011CD2600A72D3C /* QQRefresh_animation_View.m in Sources */,
 				59B9B6911FC51C3400F1B745 /* RaindropViewLayer.m in Sources */,
+				59FFFF7B2011CD2600A72D3C /* QQRefreshLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,6 +339,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CYTJAT486P;
 				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/RefreshAnimation/PrefixHeader.pch";
@@ -337,6 +356,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CYTJAT486P;
 				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/RefreshAnimation/PrefixHeader.pch";

@@ -19,18 +19,24 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-
+    
+    self.automaticallyAdjustsScrollViewInsets = NO;
     
     self.view.backgroundColor = [UIColor lightGrayColor];
 }
 
 - (void)setClassName:(NSString *)className {
+    
     _className = className;
     
     Class viewClass = NSClassFromString(className);
-    _customerView = [[viewClass alloc] initWithFrame:self.view.frame];
+    
+    CGRect frame = self.view.frame;
+    
+    _customerView = [[viewClass alloc] initWithFrame:frame];
     
     [self.view addSubview:_customerView];
 }
+
 
 @end
