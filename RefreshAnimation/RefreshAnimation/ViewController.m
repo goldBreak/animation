@@ -59,7 +59,12 @@
     animaiton1.nameString = @"波浪动画";
     animaiton1.type = animationType_other;
     
-    [self.animationList setObject:@[animaiton1] forKey:@"others"];
+    animationModel *textAnimation = [animationModel new];
+    textAnimation.classNameStr = @"TextAnimation";
+    textAnimation.nameString = @"文字动画";
+    textAnimation.type = animationType_other;
+    
+    [self.animationList setObject:@[animaiton1,textAnimation] forKey:@"others"];
     
 }
 

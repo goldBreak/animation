@@ -7,10 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		59394CD620214E2E0037E873 /* UIBezierPath+GFPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 59394CD520214E2E0037E873 /* UIBezierPath+GFPath.m */; };
 		594911AE1FBAD792002FB7D8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 594911AD1FBAD792002FB7D8 /* AppDelegate.m */; };
 		594911B11FBAD792002FB7D8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 594911B01FBAD792002FB7D8 /* ViewController.m */; };
 		594911B61FBAD792002FB7D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 594911B51FBAD792002FB7D8 /* Assets.xcassets */; };
 		594911BC1FBAD792002FB7D8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 594911BB1FBAD792002FB7D8 /* main.m */; };
+		5969214F202019C1004BC10D /* TextAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5969214E202019C1004BC10D /* TextAnimation.m */; };
 		59B9B67F1FC50D0B00F1B745 /* Refreshh2_animation_layer.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B9B67C1FC50D0B00F1B745 /* Refreshh2_animation_layer.m */; };
 		59B9B6801FC50D0B00F1B745 /* Refresh2_Animation_View.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B9B67D1FC50D0B00F1B745 /* Refresh2_Animation_View.m */; };
 		59B9B6831FC50D9D00F1B745 /* animationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B9B6821FC50D9D00F1B745 /* animationModel.m */; };
@@ -26,6 +28,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		59394CD420214E2E0037E873 /* UIBezierPath+GFPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBezierPath+GFPath.h"; sourceTree = "<group>"; };
+		59394CD520214E2E0037E873 /* UIBezierPath+GFPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBezierPath+GFPath.m"; sourceTree = "<group>"; };
 		594911A91FBAD792002FB7D8 /* RefreshAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RefreshAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		594911AC1FBAD792002FB7D8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		594911AD1FBAD792002FB7D8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -34,6 +38,8 @@
 		594911B51FBAD792002FB7D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		594911BA1FBAD792002FB7D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		594911BB1FBAD792002FB7D8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5969214D202019C1004BC10D /* TextAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextAnimation.h; sourceTree = "<group>"; };
+		5969214E202019C1004BC10D /* TextAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextAnimation.m; sourceTree = "<group>"; };
 		59B9B6781FC50B1000F1B745 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		59B9B67B1FC50D0B00F1B745 /* Refresh2_Animation_View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Refresh2_Animation_View.h; sourceTree = "<group>"; };
 		59B9B67C1FC50D0B00F1B745 /* Refreshh2_animation_layer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Refreshh2_animation_layer.m; sourceTree = "<group>"; };
@@ -71,6 +77,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		59394CD320214E2E0037E873 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				59394CD420214E2E0037E873 /* UIBezierPath+GFPath.h */,
+				59394CD520214E2E0037E873 /* UIBezierPath+GFPath.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
 		594911A01FBAD792002FB7D8 = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +116,7 @@
 				59B9B67A1FC50CEF00F1B745 /* Model */,
 				59BA7A7F1FBBEC12002C34B0 /* CoucltionAnimation.h */,
 				59BA7A801FBBEC12002C34B0 /* CoucltionAnimation.m */,
+				59394CD320214E2E0037E873 /* Category */,
 				594911B51FBAD792002FB7D8 /* Assets.xcassets */,
 				594911BA1FBAD792002FB7D8 /* Info.plist */,
 				59B9B6781FC50B1000F1B745 /* PrefixHeader.pch */,
@@ -126,6 +142,8 @@
 				59FFFF792011CD2600A72D3C /* QQRefresh_animation_View.m */,
 				59FFFF752011CD2500A72D3C /* QQRefreshLayer.h */,
 				59FFFF762011CD2500A72D3C /* QQRefreshLayer.m */,
+				5969214D202019C1004BC10D /* TextAnimation.h */,
+				5969214E202019C1004BC10D /* TextAnimation.m */,
 			);
 			path = AnimationView;
 			sourceTree = "<group>";
@@ -212,6 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				594911B11FBAD792002FB7D8 /* ViewController.m in Sources */,
+				59394CD620214E2E0037E873 /* UIBezierPath+GFPath.m in Sources */,
 				59FFFF7A2011CD2600A72D3C /* bossRefreshView.m in Sources */,
 				59B9B6831FC50D9D00F1B745 /* animationModel.m in Sources */,
 				59BA7A811FBBEC12002C34B0 /* CoucltionAnimation.m in Sources */,
@@ -225,6 +244,7 @@
 				59FFFF7C2011CD2600A72D3C /* QQRefresh_animation_View.m in Sources */,
 				59B9B6911FC51C3400F1B745 /* RaindropViewLayer.m in Sources */,
 				59FFFF7B2011CD2600A72D3C /* QQRefreshLayer.m in Sources */,
+				5969214F202019C1004BC10D /* TextAnimation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
