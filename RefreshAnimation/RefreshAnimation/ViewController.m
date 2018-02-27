@@ -55,14 +55,15 @@
     [self.animationList setObject:@[animaiton,qqAnimation,bossRefreshAnimation] forKey:@"refreshAnimation"];
     
     animationModel *animaiton1 = [animationModel new];
-    animaiton1.classNameStr = @"RaindropView";
-    animaiton1.nameString = @"波浪动画";
+    animaiton1.classNameStr = @"WaterWaveView";
+    animaiton1.nameString = @"海浪动画";
     animaiton1.type = animationType_other;
     
     animationModel *textAnimation = [animationModel new];
     textAnimation.classNameStr = @"TextAnimation";
     textAnimation.nameString = @"文字动画";
     textAnimation.type = animationType_other;
+    
     
     [self.animationList setObject:@[animaiton1,textAnimation] forKey:@"others"];
     

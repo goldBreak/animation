@@ -38,5 +38,9 @@
     [self.view addSubview:_customerView];
 }
 
+- (void)dealloc {
+    
+    NSLog(@"animationVC did dealloc");
+}
 
 @end

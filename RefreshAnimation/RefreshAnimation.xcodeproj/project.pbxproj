@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		591B937A204549E3009BB6AF /* WaterWaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 591B9379204549E3009BB6AF /* WaterWaveView.m */; };
 		59394CD620214E2E0037E873 /* UIBezierPath+GFPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 59394CD520214E2E0037E873 /* UIBezierPath+GFPath.m */; };
 		594911AE1FBAD792002FB7D8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 594911AD1FBAD792002FB7D8 /* AppDelegate.m */; };
 		594911B11FBAD792002FB7D8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 594911B01FBAD792002FB7D8 /* ViewController.m */; };
@@ -28,6 +29,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		591B9378204549E3009BB6AF /* WaterWaveView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WaterWaveView.h; sourceTree = "<group>"; };
+		591B9379204549E3009BB6AF /* WaterWaveView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WaterWaveView.m; sourceTree = "<group>"; };
 		59394CD420214E2E0037E873 /* UIBezierPath+GFPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBezierPath+GFPath.h"; sourceTree = "<group>"; };
 		59394CD520214E2E0037E873 /* UIBezierPath+GFPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBezierPath+GFPath.m"; sourceTree = "<group>"; };
 		594911A91FBAD792002FB7D8 /* RefreshAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RefreshAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -144,6 +147,8 @@
 				59FFFF762011CD2500A72D3C /* QQRefreshLayer.m */,
 				5969214D202019C1004BC10D /* TextAnimation.h */,
 				5969214E202019C1004BC10D /* TextAnimation.m */,
+				591B9378204549E3009BB6AF /* WaterWaveView.h */,
+				591B9379204549E3009BB6AF /* WaterWaveView.m */,
 			);
 			path = AnimationView;
 			sourceTree = "<group>";
@@ -238,6 +243,7 @@
 				59B9B6801FC50D0B00F1B745 /* Refresh2_Animation_View.m in Sources */,
 				59B9B67F1FC50D0B00F1B745 /* Refreshh2_animation_layer.m in Sources */,
 				594911BC1FBAD792002FB7D8 /* main.m in Sources */,
+				591B937A204549E3009BB6AF /* WaterWaveView.m in Sources */,
 				594911AE1FBAD792002FB7D8 /* AppDelegate.m in Sources */,
 				59B9B68B1FC517C800F1B745 /* UIView+UIView.m in Sources */,
 				59B9B68E1FC519AF00F1B745 /* RaindropView.m in Sources */,

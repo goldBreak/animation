@@ -31,12 +31,11 @@
 {
     self = [super init];
     if (self) {
-        //        self.backgroundColor = [UIColor lightGrayColor].CGColor;
         
         self.pointA = CGPointMake(k_screenWidth / 2, 30.0);
         self.maxRadious = 15.0;
         self.radious = self.maxRadious;
-        //        _radious = 30.0;
+        
         self.pointB = CGPointMake(k_screenWidth / 2 + _radious, 30.0 +_radious);
         self.pointC = CGPointMake(_pointA.x, 30.0 + _radious * 2);
         self.pointD = CGPointMake(k_screenWidth / 2 - _radious, 30.0 + _radious);

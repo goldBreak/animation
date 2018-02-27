@@ -59,9 +59,9 @@
 }
 
 #pragma mark-
-- (void)setAnimation:(CGFloat)progress {
+- (void)setAnimation:(CGFloat)offsety {
     //
-    CGFloat offsetY = -progress;
+    CGFloat offsetY = -offsety;
     if (offsetY < self.refreshView.bounds.size.height) {
         return;
     }
@@ -202,6 +202,7 @@
     if (!_refreshView) {
         _refreshView = [[UIView alloc] initWithFrame:CGRectMake(0, -40, self.frame.size.width, 40)];
         _refreshView.backgroundColor = [UIColor clearColor];
+        
     }
     return _refreshView;
 }
@@ -213,7 +214,7 @@
         _firstCycle.frame = CGRectMake(0, 0, CGRectGetHeight(self.refreshView.frame), CGRectGetHeight(self.refreshView.frame));
         _firstCycle.position = CGPointMake(self.center.x, _firstCycle.bounds.size.height / 2);
         
-        //添加cell
+        //添加path
         UIBezierPath *path = [UIBezierPath bezierPath];
         [path addArcWithCenter:CGPointMake(CGRectGetWidth(_firstCycle.frame) / 2., cycleRadious) radius:cycleRadious startAngle:0 endAngle:M_PI * 2 clockwise:1];
         [_firstCycle setFillColor:[UIColor redColor].CGColor];
