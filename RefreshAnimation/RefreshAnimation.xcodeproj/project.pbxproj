@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		591B937A204549E3009BB6AF /* WaterWaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 591B9379204549E3009BB6AF /* WaterWaveView.m */; };
 		59394CD620214E2E0037E873 /* UIBezierPath+GFPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 59394CD520214E2E0037E873 /* UIBezierPath+GFPath.m */; };
+		5939617D206A0865003C62BB /* littleRedBookView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5939617C206A0865003C62BB /* littleRedBookView.m */; };
 		594911AE1FBAD792002FB7D8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 594911AD1FBAD792002FB7D8 /* AppDelegate.m */; };
 		594911B11FBAD792002FB7D8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 594911B01FBAD792002FB7D8 /* ViewController.m */; };
 		594911B61FBAD792002FB7D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 594911B51FBAD792002FB7D8 /* Assets.xcassets */; };
@@ -33,6 +34,8 @@
 		591B9379204549E3009BB6AF /* WaterWaveView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WaterWaveView.m; sourceTree = "<group>"; };
 		59394CD420214E2E0037E873 /* UIBezierPath+GFPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBezierPath+GFPath.h"; sourceTree = "<group>"; };
 		59394CD520214E2E0037E873 /* UIBezierPath+GFPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBezierPath+GFPath.m"; sourceTree = "<group>"; };
+		5939617B206A0865003C62BB /* littleRedBookView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = littleRedBookView.h; sourceTree = "<group>"; };
+		5939617C206A0865003C62BB /* littleRedBookView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = littleRedBookView.m; sourceTree = "<group>"; };
 		594911A91FBAD792002FB7D8 /* RefreshAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RefreshAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		594911AC1FBAD792002FB7D8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		594911AD1FBAD792002FB7D8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -89,6 +92,75 @@
 			path = Category;
 			sourceTree = "<group>";
 		};
+		593961742069F8BA003C62BB /* 果冻刷新动画 */ = {
+			isa = PBXGroup;
+			children = (
+				59B9B67B1FC50D0B00F1B745 /* Refresh2_Animation_View.h */,
+				59B9B67D1FC50D0B00F1B745 /* Refresh2_Animation_View.m */,
+				59B9B67E1FC50D0B00F1B745 /* Refreshh2_animation_layer.h */,
+				59B9B67C1FC50D0B00F1B745 /* Refreshh2_animation_layer.m */,
+			);
+			path = "果冻刷新动画";
+			sourceTree = "<group>";
+		};
+		593961752069F8D4003C62BB /* 雨滴动画 */ = {
+			isa = PBXGroup;
+			children = (
+				59B9B68C1FC519AF00F1B745 /* RaindropView.h */,
+				59B9B68D1FC519AF00F1B745 /* RaindropView.m */,
+				59B9B68F1FC51C3400F1B745 /* RaindropViewLayer.h */,
+				59B9B6901FC51C3400F1B745 /* RaindropViewLayer.m */,
+			);
+			path = "雨滴动画";
+			sourceTree = "<group>";
+		};
+		593961762069F8EB003C62BB /* QQ刷新动画 */ = {
+			isa = PBXGroup;
+			children = (
+				59FFFF782011CD2500A72D3C /* QQRefresh_animation_View.h */,
+				59FFFF792011CD2600A72D3C /* QQRefresh_animation_View.m */,
+				59FFFF752011CD2500A72D3C /* QQRefreshLayer.h */,
+				59FFFF762011CD2500A72D3C /* QQRefreshLayer.m */,
+			);
+			path = "QQ刷新动画";
+			sourceTree = "<group>";
+		};
+		593961772069F8FD003C62BB /* Boss刷新动画 */ = {
+			isa = PBXGroup;
+			children = (
+				59FFFF772011CD2500A72D3C /* bossRefreshView.h */,
+				59FFFF742011CD2500A72D3C /* bossRefreshView.m */,
+			);
+			path = "Boss刷新动画";
+			sourceTree = "<group>";
+		};
+		593961782069F90E003C62BB /* 文字动画 */ = {
+			isa = PBXGroup;
+			children = (
+				5969214D202019C1004BC10D /* TextAnimation.h */,
+				5969214E202019C1004BC10D /* TextAnimation.m */,
+			);
+			path = "文字动画";
+			sourceTree = "<group>";
+		};
+		593961792069F91F003C62BB /* 水波动画 */ = {
+			isa = PBXGroup;
+			children = (
+				591B9378204549E3009BB6AF /* WaterWaveView.h */,
+				591B9379204549E3009BB6AF /* WaterWaveView.m */,
+			);
+			path = "水波动画";
+			sourceTree = "<group>";
+		};
+		5939617A2069F935003C62BB /* 小红书刷新动画 */ = {
+			isa = PBXGroup;
+			children = (
+				5939617B206A0865003C62BB /* littleRedBookView.h */,
+				5939617C206A0865003C62BB /* littleRedBookView.m */,
+			);
+			path = "小红书刷新动画";
+			sourceTree = "<group>";
+		};
 		594911A01FBAD792002FB7D8 = {
 			isa = PBXGroup;
 			children = (
@@ -131,24 +203,13 @@
 		59B9B6791FC50CEF00F1B745 /* AnimationView */ = {
 			isa = PBXGroup;
 			children = (
-				59B9B67B1FC50D0B00F1B745 /* Refresh2_Animation_View.h */,
-				59B9B67D1FC50D0B00F1B745 /* Refresh2_Animation_View.m */,
-				59B9B67E1FC50D0B00F1B745 /* Refreshh2_animation_layer.h */,
-				59B9B67C1FC50D0B00F1B745 /* Refreshh2_animation_layer.m */,
-				59B9B68C1FC519AF00F1B745 /* RaindropView.h */,
-				59B9B68D1FC519AF00F1B745 /* RaindropView.m */,
-				59B9B68F1FC51C3400F1B745 /* RaindropViewLayer.h */,
-				59B9B6901FC51C3400F1B745 /* RaindropViewLayer.m */,
-				59FFFF772011CD2500A72D3C /* bossRefreshView.h */,
-				59FFFF742011CD2500A72D3C /* bossRefreshView.m */,
-				59FFFF782011CD2500A72D3C /* QQRefresh_animation_View.h */,
-				59FFFF792011CD2600A72D3C /* QQRefresh_animation_View.m */,
-				59FFFF752011CD2500A72D3C /* QQRefreshLayer.h */,
-				59FFFF762011CD2500A72D3C /* QQRefreshLayer.m */,
-				5969214D202019C1004BC10D /* TextAnimation.h */,
-				5969214E202019C1004BC10D /* TextAnimation.m */,
-				591B9378204549E3009BB6AF /* WaterWaveView.h */,
-				591B9379204549E3009BB6AF /* WaterWaveView.m */,
+				5939617A2069F935003C62BB /* 小红书刷新动画 */,
+				593961792069F91F003C62BB /* 水波动画 */,
+				593961782069F90E003C62BB /* 文字动画 */,
+				593961772069F8FD003C62BB /* Boss刷新动画 */,
+				593961762069F8EB003C62BB /* QQ刷新动画 */,
+				593961752069F8D4003C62BB /* 雨滴动画 */,
+				593961742069F8BA003C62BB /* 果冻刷新动画 */,
 			);
 			path = AnimationView;
 			sourceTree = "<group>";
@@ -243,6 +304,7 @@
 				59B9B6801FC50D0B00F1B745 /* Refresh2_Animation_View.m in Sources */,
 				59B9B67F1FC50D0B00F1B745 /* Refreshh2_animation_layer.m in Sources */,
 				594911BC1FBAD792002FB7D8 /* main.m in Sources */,
+				5939617D206A0865003C62BB /* littleRedBookView.m in Sources */,
 				591B937A204549E3009BB6AF /* WaterWaveView.m in Sources */,
 				594911AE1FBAD792002FB7D8 /* AppDelegate.m in Sources */,
 				59B9B68B1FC517C800F1B745 /* UIView+UIView.m in Sources */,

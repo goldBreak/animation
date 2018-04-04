@@ -52,7 +52,12 @@
     bossRefreshAnimation.nameString = @"boss刷新动画";
     bossRefreshAnimation.type = animationType_refresh;
     
-    [self.animationList setObject:@[animaiton,qqAnimation,bossRefreshAnimation] forKey:@"refreshAnimation"];
+    animationModel *littleRedBookAnimation = [animationModel new];
+    littleRedBookAnimation.classNameStr = @"littleRedBookView";
+    littleRedBookAnimation.nameString = @"小红书刷新动画";
+    littleRedBookAnimation.type = animationType_refresh;
+    
+    [self.animationList setObject:@[animaiton,qqAnimation,bossRefreshAnimation,littleRedBookAnimation] forKey:@"refreshAnimation"];
     
     animationModel *animaiton1 = [animationModel new];
     animaiton1.classNameStr = @"WaterWaveView";
