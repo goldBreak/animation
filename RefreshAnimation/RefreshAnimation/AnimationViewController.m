@@ -7,10 +7,11 @@
 //
 
 #import "AnimationViewController.h"
+#import "BasicView.h"
 
 @interface AnimationViewController ()
 
-@property (nonatomic, strong) UIView *customerView;
+@property (nonatomic, strong) BasicView *customerView;
 
 @end
 
@@ -36,6 +37,11 @@
     _customerView = [[viewClass alloc] initWithFrame:frame];
     
     [self.view addSubview:_customerView];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [_customerView stopAnimation];
 }
 
 - (void)dealloc {

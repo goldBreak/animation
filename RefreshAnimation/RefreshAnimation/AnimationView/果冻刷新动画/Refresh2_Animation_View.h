@@ -6,9 +6,10 @@
 //  Copyright © 2017年 com.shuxuan.fwex. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "BasicView.h"
 
-@interface Refresh2_Animation_View : UIView
+@interface Refresh2_Animation_View : BasicView
+
 
 
 @end

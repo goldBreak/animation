@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5918E18D211C138D008659A1 /* mew_baseline.png in Resources */ = {isa = PBXBuildFile; fileRef = 5918E18C211C138D008659A1 /* mew_baseline.png */; };
 		591B937A204549E3009BB6AF /* WaterWaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 591B9379204549E3009BB6AF /* WaterWaveView.m */; };
+		591EB6D3207F3E2A0004CB44 /* HafeLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 591EB6D2207F3E2A0004CB44 /* HafeLayer.m */; };
+		591EB6D7207F4E6E0004CB44 /* BasicView.m in Sources */ = {isa = PBXBuildFile; fileRef = 591EB6D6207F4E6E0004CB44 /* BasicView.m */; };
+		59225A4C211A8F300053EC99 /* FactorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59225A4B211A8F300053EC99 /* FactorView.m */; };
 		59394CD620214E2E0037E873 /* UIBezierPath+GFPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 59394CD520214E2E0037E873 /* UIBezierPath+GFPath.m */; };
 		5939617D206A0865003C62BB /* littleRedBookView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5939617C206A0865003C62BB /* littleRedBookView.m */; };
 		594911AE1FBAD792002FB7D8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 594911AD1FBAD792002FB7D8 /* AppDelegate.m */; };
@@ -30,8 +34,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5918E18C211C138D008659A1 /* mew_baseline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mew_baseline.png; sourceTree = "<group>"; };
 		591B9378204549E3009BB6AF /* WaterWaveView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WaterWaveView.h; sourceTree = "<group>"; };
 		591B9379204549E3009BB6AF /* WaterWaveView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WaterWaveView.m; sourceTree = "<group>"; };
+		591EB6D1207F3E2A0004CB44 /* HafeLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HafeLayer.h; sourceTree = "<group>"; };
+		591EB6D2207F3E2A0004CB44 /* HafeLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HafeLayer.m; sourceTree = "<group>"; };
+		591EB6D5207F4E6E0004CB44 /* BasicView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BasicView.h; sourceTree = "<group>"; };
+		591EB6D6207F4E6E0004CB44 /* BasicView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BasicView.m; sourceTree = "<group>"; };
+		59225A4A211A8F300053EC99 /* FactorView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FactorView.h; sourceTree = "<group>"; };
+		59225A4B211A8F300053EC99 /* FactorView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FactorView.m; sourceTree = "<group>"; };
 		59394CD420214E2E0037E873 /* UIBezierPath+GFPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBezierPath+GFPath.h"; sourceTree = "<group>"; };
 		59394CD520214E2E0037E873 /* UIBezierPath+GFPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBezierPath+GFPath.m"; sourceTree = "<group>"; };
 		5939617B206A0865003C62BB /* littleRedBookView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = littleRedBookView.h; sourceTree = "<group>"; };
@@ -83,6 +94,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5918E18B211C137C008659A1 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				5918E18C211C138D008659A1 /* mew_baseline.png */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		591EB6D4207F4E570004CB44 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				591EB6D5207F4E6E0004CB44 /* BasicView.h */,
+				591EB6D6207F4E6E0004CB44 /* BasicView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		59225A49211A8EF10053EC99 /* 翻页动画 */ = {
+			isa = PBXGroup;
+			children = (
+				59225A4A211A8F300053EC99 /* FactorView.h */,
+				59225A4B211A8F300053EC99 /* FactorView.m */,
+			);
+			path = "翻页动画";
+			sourceTree = "<group>";
+		};
 		59394CD320214E2E0037E873 /* Category */ = {
 			isa = PBXGroup;
 			children = (
@@ -157,6 +194,8 @@
 			children = (
 				5939617B206A0865003C62BB /* littleRedBookView.h */,
 				5939617C206A0865003C62BB /* littleRedBookView.m */,
+				591EB6D1207F3E2A0004CB44 /* HafeLayer.h */,
+				591EB6D2207F3E2A0004CB44 /* HafeLayer.m */,
 			);
 			path = "小红书刷新动画";
 			sourceTree = "<group>";
@@ -193,8 +232,10 @@
 				59BA7A801FBBEC12002C34B0 /* CoucltionAnimation.m */,
 				59394CD320214E2E0037E873 /* Category */,
 				594911B51FBAD792002FB7D8 /* Assets.xcassets */,
+				5918E18B211C137C008659A1 /* Sources */,
 				594911BA1FBAD792002FB7D8 /* Info.plist */,
 				59B9B6781FC50B1000F1B745 /* PrefixHeader.pch */,
+				591EB6D4207F4E570004CB44 /* Views */,
 				594911BB1FBAD792002FB7D8 /* main.m */,
 			);
 			path = RefreshAnimation;
@@ -203,6 +244,7 @@
 		59B9B6791FC50CEF00F1B745 /* AnimationView */ = {
 			isa = PBXGroup;
 			children = (
+				59225A49211A8EF10053EC99 /* 翻页动画 */,
 				5939617A2069F935003C62BB /* 小红书刷新动画 */,
 				593961792069F91F003C62BB /* 水波动画 */,
 				593961782069F90E003C62BB /* 文字动画 */,
@@ -285,6 +327,7 @@
 			files = (
 				594911B61FBAD792002FB7D8 /* Assets.xcassets in Resources */,
 				59B9B6881FC5172500F1B745 /* Default-568h@2x.png in Resources */,
+				5918E18D211C138D008659A1 /* mew_baseline.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,6 +340,7 @@
 			files = (
 				594911B11FBAD792002FB7D8 /* ViewController.m in Sources */,
 				59394CD620214E2E0037E873 /* UIBezierPath+GFPath.m in Sources */,
+				591EB6D3207F3E2A0004CB44 /* HafeLayer.m in Sources */,
 				59FFFF7A2011CD2600A72D3C /* bossRefreshView.m in Sources */,
 				59B9B6831FC50D9D00F1B745 /* animationModel.m in Sources */,
 				59BA7A811FBBEC12002C34B0 /* CoucltionAnimation.m in Sources */,
@@ -308,7 +352,9 @@
 				591B937A204549E3009BB6AF /* WaterWaveView.m in Sources */,
 				594911AE1FBAD792002FB7D8 /* AppDelegate.m in Sources */,
 				59B9B68B1FC517C800F1B745 /* UIView+UIView.m in Sources */,
+				59225A4C211A8F300053EC99 /* FactorView.m in Sources */,
 				59B9B68E1FC519AF00F1B745 /* RaindropView.m in Sources */,
+				591EB6D7207F4E6E0004CB44 /* BasicView.m in Sources */,
 				59FFFF7C2011CD2600A72D3C /* QQRefresh_animation_View.m in Sources */,
 				59B9B6911FC51C3400F1B745 /* RaindropViewLayer.m in Sources */,
 				59FFFF7B2011CD2600A72D3C /* QQRefreshLayer.m in Sources */,

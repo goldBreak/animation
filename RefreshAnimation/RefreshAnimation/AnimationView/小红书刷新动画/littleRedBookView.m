@@ -7,13 +7,15 @@
 //
 
 #import "littleRedBookView.h"
+#import "CoucltionAnimation.h"
+#import "HafeLayer.h"
 
 @interface littleRedBookView()<CAAnimationDelegate>
 
 @property (nonatomic, strong) CALayer *contentLayer;
 
-@property (nonatomic, strong) CAShapeLayer *upHalfLayer;
-@property (nonatomic, strong) CAShapeLayer *downHalfLayer;
+@property (nonatomic, strong) HafeLayer *upHalfLayer;
+@property (nonatomic, strong) HafeLayer *downHalfLayer;
 
 @property (nonatomic, strong) UIBezierPath *upHalfBezierPath;//上半个
 @property (nonatomic, strong) UIBezierPath *downHalfBezierPath;//下半个
@@ -59,53 +61,56 @@
 
 - (NSMutableArray *)valueWithDuration:(CFTimeInterval)time path:(UIBezierPath *)path fromValue:(CGFloat)fromValue toValue:(CGFloat)toValue {
     
-    //1秒30个！不要太多了
-    NSInteger numbersOfPoint = time * 30;
-    NSMutableArray *array = [NSMutableArray array];
-    
-    CGFloat d_value = toValue - fromValue;
-    //分成10块！
-    //blank  为  0 - d_value/10;
-    //dash   为  d_value/10 - 0;
-    CGFloat dash = d_value / 10;
-    CGFloat blanks = dash / numbersOfPoint;
-    CGFloat autoBlanks = 0;
-    for (int i = 0; i < numbersOfPoint; i ++) {
-        CGFloat a[2];
-        if (fromValue > toValue) {
-            a[0] = dash - autoBlanks;
-            a[1] = autoBlanks;
-        } else {
-            a[0] = autoBlanks;
-            a[1] = dash - autoBlanks;
-        }
-    
-        [path setLineDash:a count:2 phase:0];
-        [array addObject:(__bridge id)[[path copy] CGPath]];
-        autoBlanks += blanks;
+    NSArray *array = [CoucltionAnimation animationValues:@(0.7) toValue:@(0) usingSpringWithDamping:2 initialSpringVelocity:5 duration:time];
+    NSMutableArray *resulst = [NSMutableArray array];
+    for (NSInteger i = 0 ,count = array.count; i < count; i ++) {
+        UIBezierPath *path = [self upHalfBezierPath];
+        CGFloat loat[] = {(CGFloat)2.0,(CGFloat)[array[i] floatValue] * 10};
+        [path setLineDash:loat count:2 phase:0];
+        [resulst addObject:path];
     }
-    return nil;
+    return resulst;
+}
+
+- (NSMutableArray *)valueWithDuration:(CFTimeInterval)time {
+    
+    NSMutableArray *array = [NSMutableArray array];
+    int numbersOfPoint = time * 30;
+    CGFloat bangth = (self.upHalfLayer.bounds.size.width / 2. - 4) * M_PI;
+    
+    [array addObject:@(bangth)];
+    
+    for (int i = 1; i < numbersOfPoint; i ++) {
+        bangth /= 2;
+        [array addObject:@(bangth)];
+    }
+    NSMutableArray *result = [NSMutableArray array];
+    for (int i = numbersOfPoint - 1; i >= 0 ; i --) {
+        [result addObject:@[@(2),array[i]]];
+    }
+    return result;
 }
 
 - (void)buildAnimation {
     
-    CFTimeInterval duration = 0.5;
+    CFTimeInterval duration = 0.85;
     CABasicAnimation *rotationAnimation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
     rotationAnimation.fromValue = @(0);
-    rotationAnimation.toValue  = @(M_PI);
+    rotationAnimation.toValue  = @(M_PI*2);
+
+    CABasicAnimation *keyAnimation_ = [CABasicAnimation animationWithKeyPath:@"lineDashPattern"];
+    keyAnimation_.fromValue = @[@2,@0];
+    keyAnimation_.toValue = @[@2,@20];
     
-    CAKeyframeAnimation *keyAnimation = [CAKeyframeAnimation animationWithKeyPath:@"path"];
-    keyAnimation.values = [self valueWithDuration:duration path:self.upHalfBezierPath fromValue:60 toValue:0];
+    CAKeyframeAnimation *keyAnimaiton = [CAKeyframeAnimation animationWithKeyPath:@"path"];
+    keyAnimaiton.values = [self valueWithDuration:duration path:nil fromValue:0 toValue:0   ];
     
-    CABasicAnimation *stokeAnimation = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
-    stokeAnimation.fromValue = @1;
-    stokeAnimation.toValue = @0.2;
     
     self.gropOne = [CAAnimationGroup animation];
-    self.gropOne.animations = @[rotationAnimation,keyAnimation,stokeAnimation];
+    self.gropOne.animations = @[keyAnimaiton];
     self.gropOne.duration = duration;
     self.gropOne.delegate = self;
-    self.gropOne.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];
+    self.gropOne.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
     self.gropOne.removedOnCompletion = NO;
     self.gropOne.fillMode = kCAFillModeForwards;
     
@@ -113,7 +118,7 @@
     keyAnimation1.values = [self valueWithDuration:duration path:self.downHalfBezierPath fromValue:60. toValue:0];
     
     self.gropOne1 = [CAAnimationGroup animation];
-    self.gropOne1.animations = @[[rotationAnimation copy],keyAnimation1,[stokeAnimation copy]];
+    self.gropOne1.animations = @[[rotationAnimation copy],keyAnimation1];
     self.gropOne1.duration = duration;
     self.gropOne1.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];
     self.gropOne1.removedOnCompletion = NO;
@@ -122,21 +127,22 @@
     
     //group2
     CABasicAnimation *rotationAnimation1 = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
-    rotationAnimation1.fromValue = @(M_PI);
+    rotationAnimation1.fromValue = @(0);
     rotationAnimation1.toValue  = @(M_PI*2);
     
-    CAKeyframeAnimation *keyAnimation21 = [CAKeyframeAnimation animationWithKeyPath:@"path"];
-    keyAnimation21.values = [self valueWithDuration:duration path:self.upHalfBezierPath fromValue:0 toValue:60];
+    CABasicAnimation *keyAnimation21 = [CABasicAnimation animationWithKeyPath:@"lineDashPattern"];
+    keyAnimation21.fromValue = @[@2,@20];
+    keyAnimation21.toValue = @[@2,@0];
     
-    CABasicAnimation *stokeAnimation1 = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
-    stokeAnimation1.fromValue = @0.2;
-    stokeAnimation1.toValue = @1;
+//    CABasicAnimation *stokeAnimation1 = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
+//    stokeAnimation1.fromValue = @0.2;
+//    stokeAnimation1.toValue = @1;
     
     self.gropTwo = [CAAnimationGroup animation];
-    self.gropTwo.animations = @[rotationAnimation1,keyAnimation21,stokeAnimation1];
+    self.gropTwo.animations = @[rotationAnimation1,keyAnimation21];
     self.gropTwo.duration = duration;
     self.gropTwo.delegate = self;
-    self.gropTwo.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
+    self.gropTwo.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
     self.gropTwo.removedOnCompletion = NO;
     self.gropTwo.fillMode = kCAFillModeForwards;
     
@@ -144,7 +150,7 @@
     keyAnimation22.values = [self valueWithDuration:duration path:self.downHalfBezierPath fromValue:0 toValue:60];
     
     self.gropTwo2 = [CAAnimationGroup animation];
-    self.gropTwo2.animations = @[[rotationAnimation1 copy],keyAnimation22,[stokeAnimation1 copy]];
+    self.gropTwo2.animations = @[[rotationAnimation1 copy],keyAnimation22];
     self.gropTwo2.duration = duration;
     self.gropTwo2.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
     self.gropTwo2.removedOnCompletion = NO;
@@ -164,7 +170,7 @@
         //
 //        [self.upHalfLayer removeAllAnimations];
 //        [self.downHalfLayer removeAllAnimations];
-        self.upHalfLayer.strokeEnd = 0.2;
+//        self.upHalfLayer.strokeEnd = 0.2;
         [self animationStepTwo];
     } else if([anim isEqual:[self.upHalfLayer animationForKey:@"step2"]]) {
         //
@@ -177,12 +183,10 @@
 
 - (void)animationStepOne {
     [self.upHalfLayer addAnimation:self.gropOne forKey:@"step1"];
-//    [self.downHalfLayer addAnimation:self.gropOne1 forKey:nil];
 }
 
 - (void)animationStepTwo {
     [self.upHalfLayer addAnimation:self.gropTwo forKey:@"step2"];
-//    [self.downHalfLayer addAnimation:self.gropTwo2 forKey:nil];
 }
 
 - (void)stopAnimation {
@@ -227,11 +231,11 @@
     }
     return _contentLayer;
 }
-- (CAShapeLayer *)upHalfLayer {
+- (HafeLayer *)upHalfLayer {
     
     if (!_upHalfLayer) {
         
-        _upHalfLayer = [CAShapeLayer layer];
+        _upHalfLayer = [HafeLayer layer];
         _upHalfLayer.frame = _contentLayer.bounds;
         _upHalfLayer.path = self.upHalfBezierPath.CGPath;
         _upHalfLayer.lineWidth = 3.;
@@ -243,9 +247,9 @@
     return _upHalfLayer;
 }
 
-- (CAShapeLayer *)downHalfLayer {
+- (HafeLayer *)downHalfLayer {
     if (!_downHalfLayer) {
-        _downHalfLayer = [CAShapeLayer layer];
+        _downHalfLayer = [HafeLayer layer];
         _downHalfLayer.frame = _contentLayer.bounds;
         _downHalfLayer.path = self.downHalfBezierPath.CGPath;
         _downHalfLayer.lineWidth = 3.;
@@ -260,7 +264,7 @@
 - (UISwitch *)switchBtn {
     
     if (!_switchBtn) {
-        _switchBtn = [[UISwitch alloc] initWithFrame:CGRectMake(self.width - 100, 80, 50, 40)];
+        _switchBtn = [[UISwitch alloc] initWithFrame:CGRectMake(self.width - 100, 140, 50, 40)];
         [_switchBtn addTarget:self action:@selector(handleSwitch:) forControlEvents:UIControlEventValueChanged];
         
     }

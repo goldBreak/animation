@@ -6,8 +6,10 @@
 //  Copyright © 2018年 com.shuxuan.fwex. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 
-@interface TextAnimation : UIView
+#import "BasicView.h"
+
+@interface TextAnimation : BasicView
+
 
 @end

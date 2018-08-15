@@ -68,9 +68,13 @@
     textAnimation.classNameStr = @"TextAnimation";
     textAnimation.nameString = @"文字动画";
     textAnimation.type = animationType_other;
+  
+    animationModel *factorAnimation = [animationModel new];
+    factorAnimation.classNameStr = @"FactorView";
+    factorAnimation.nameString = @"翻页动画";
+    factorAnimation.type = animationType_other;
     
-    
-    [self.animationList setObject:@[animaiton1,textAnimation] forKey:@"others"];
+    [self.animationList setObject:@[animaiton1,textAnimation,factorAnimation] forKey:@"others"];
     
 }
 

@@ -6,8 +6,10 @@
 //  Copyright © 2017年 com.shuxuan.fwex. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 
-@interface QQRefresh_animation_View : UIView
+
+#import "BasicView.h"
+
+@interface QQRefresh_animation_View : BasicView
 
 @end
