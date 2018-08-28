@@ -9,8 +9,9 @@
 #import <Foundation/Foundation.h>
 
 typedef NS_ENUM(NSUInteger, animationType) {
-    animationType_refresh,
-    animationType_other,
+    animationType_refresh,    /* 刷新动画 !*/
+    animationType_Dynaic,  /* 动力学动画 !*/
+    animationType_other,     /* 其他的类型 !*/
 };
 
 @interface animationModel : NSObject<NSCopying>

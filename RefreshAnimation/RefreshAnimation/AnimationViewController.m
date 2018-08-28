@@ -41,7 +41,11 @@
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
-    [_customerView stopAnimation];
+    
+    if ([_customerView respondsToSelector:@selector(stopAnimation)]) {
+        [_customerView stopAnimation];
+    }
+    
 }
 
 - (void)dealloc {

@@ -51,13 +51,9 @@
     bossRefreshAnimation.classNameStr = @"bossRefreshView";
     bossRefreshAnimation.nameString = @"boss刷新动画";
     bossRefreshAnimation.type = animationType_refresh;
+
     
-    animationModel *littleRedBookAnimation = [animationModel new];
-    littleRedBookAnimation.classNameStr = @"littleRedBookView";
-    littleRedBookAnimation.nameString = @"小红书刷新动画";
-    littleRedBookAnimation.type = animationType_refresh;
-    
-    [self.animationList setObject:@[animaiton,qqAnimation,bossRefreshAnimation,littleRedBookAnimation] forKey:@"refreshAnimation"];
+    [self.animationList setObject:@[animaiton,qqAnimation,bossRefreshAnimation] forKey:@"刷新动画"];
     
     animationModel *animaiton1 = [animationModel new];
     animaiton1.classNameStr = @"WaterWaveView";
@@ -74,7 +70,13 @@
     factorAnimation.nameString = @"翻页动画";
     factorAnimation.type = animationType_other;
     
-    [self.animationList setObject:@[animaiton1,textAnimation,factorAnimation] forKey:@"others"];
+    [self.animationList setObject:@[animaiton1,textAnimation,factorAnimation] forKey:@"其他的"];
+    
+    animationModel *dynaicAnimation = [animationModel new];
+    dynaicAnimation.classNameStr = @"DynanicDemo";
+    dynaicAnimation.nameString = @"吸附动画";
+    dynaicAnimation.type = animationType_Dynaic;
+    [self.animationList setObject:@[dynaicAnimation] forKey:@"动力学动画"];
     
 }
 
