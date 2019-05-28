@@ -40,4 +40,14 @@
     return CGRectGetMaxY(self.frame);
 }
 
+- (CGFloat)midX {
+    
+    return (self.originX + self.width) / 2.0;
+}
+
+- (CGFloat)midY {
+    
+    return (self.originY + self.height) / 2.0;
+}
+
 @end

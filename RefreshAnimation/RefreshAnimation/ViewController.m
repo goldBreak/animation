@@ -70,13 +70,27 @@
     factorAnimation.nameString = @"翻页动画";
     factorAnimation.type = animationType_other;
     
-    [self.animationList setObject:@[animaiton1,textAnimation,factorAnimation] forKey:@"其他的"];
+    animationModel *additiveAnimation = [animationModel new];
+    additiveAnimation.classNameStr = @"AdditiveAnimation";
+    additiveAnimation.nameString = @"additive动画";
+    additiveAnimation.type = animationType_other;
+    
+    
+    [self.animationList setObject:@[animaiton1,textAnimation,factorAnimation,additiveAnimation] forKey:@"其他的"];
     
     animationModel *dynaicAnimation = [animationModel new];
     dynaicAnimation.classNameStr = @"DynanicDemo";
     dynaicAnimation.nameString = @"吸附动画";
     dynaicAnimation.type = animationType_Dynaic;
     [self.animationList setObject:@[dynaicAnimation] forKey:@"动力学动画"];
+    
+    animationModel *menueAnimation = [animationModel new];
+    menueAnimation.classNameStr = @"PRMenueBGView";
+    menueAnimation.nameString = @"菜单动画";
+    menueAnimation.type = animationType_Dynaic;
+    [self.animationList setObject:@[menueAnimation] forKey:@"菜单动画"];
+    
+    
     
 }
 

@@ -30,6 +30,9 @@
 		59FFFF7A2011CD2600A72D3C /* bossRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59FFFF742011CD2500A72D3C /* bossRefreshView.m */; };
 		59FFFF7B2011CD2600A72D3C /* QQRefreshLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 59FFFF762011CD2500A72D3C /* QQRefreshLayer.m */; };
 		59FFFF7C2011CD2600A72D3C /* QQRefresh_animation_View.m in Sources */ = {isa = PBXBuildFile; fileRef = 59FFFF792011CD2600A72D3C /* QQRefresh_animation_View.m */; };
+		9D36328B229CD7EB001642A8 /* RFMenueView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D36328A229CD7EB001642A8 /* RFMenueView.m */; };
+		9D36328E229CD956001642A8 /* PRMenueBGView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D36328D229CD956001642A8 /* PRMenueBGView.m */; };
+		9D363292229D299E001642A8 /* AdditiveAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D363291229D299E001642A8 /* AdditiveAnimation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +81,12 @@
 		59FFFF772011CD2500A72D3C /* bossRefreshView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bossRefreshView.h; sourceTree = "<group>"; };
 		59FFFF782011CD2500A72D3C /* QQRefresh_animation_View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QQRefresh_animation_View.h; sourceTree = "<group>"; };
 		59FFFF792011CD2600A72D3C /* QQRefresh_animation_View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QQRefresh_animation_View.m; sourceTree = "<group>"; };
+		9D363289229CD7EB001642A8 /* RFMenueView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RFMenueView.h; sourceTree = "<group>"; };
+		9D36328A229CD7EB001642A8 /* RFMenueView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RFMenueView.m; sourceTree = "<group>"; };
+		9D36328C229CD956001642A8 /* PRMenueBGView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PRMenueBGView.h; sourceTree = "<group>"; };
+		9D36328D229CD956001642A8 /* PRMenueBGView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PRMenueBGView.m; sourceTree = "<group>"; };
+		9D363290229D299E001642A8 /* AdditiveAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AdditiveAnimation.h; sourceTree = "<group>"; };
+		9D363291229D299E001642A8 /* AdditiveAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AdditiveAnimation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -240,6 +249,8 @@
 		59B9B6791FC50CEF00F1B745 /* AnimationView */ = {
 			isa = PBXGroup;
 			children = (
+				9D36328F229D297B001642A8 /* Additive动画 */,
+				9D363288229CD76C001642A8 /* 菜目动画 */,
 				59225A49211A8EF10053EC99 /* 翻页动画 */,
 				593961792069F91F003C62BB /* 水波动画 */,
 				593961782069F90E003C62BB /* 文字动画 */,
@@ -260,6 +271,26 @@
 				59B9B68A1FC517C800F1B745 /* UIView+UIView.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		9D363288229CD76C001642A8 /* 菜目动画 */ = {
+			isa = PBXGroup;
+			children = (
+				9D36328C229CD956001642A8 /* PRMenueBGView.h */,
+				9D36328D229CD956001642A8 /* PRMenueBGView.m */,
+				9D363289229CD7EB001642A8 /* RFMenueView.h */,
+				9D36328A229CD7EB001642A8 /* RFMenueView.m */,
+			);
+			path = "菜目动画";
+			sourceTree = "<group>";
+		};
+		9D36328F229D297B001642A8 /* Additive动画 */ = {
+			isa = PBXGroup;
+			children = (
+				9D363290229D299E001642A8 /* AdditiveAnimation.h */,
+				9D363291229D299E001642A8 /* AdditiveAnimation.m */,
+			);
+			path = "Additive动画";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -340,12 +371,15 @@
 				59BA7A811FBBEC12002C34B0 /* CoucltionAnimation.m in Sources */,
 				59B9B6861FC511E700F1B745 /* AnimationViewController.m in Sources */,
 				59B9B6801FC50D0B00F1B745 /* Refresh2_Animation_View.m in Sources */,
+				9D36328B229CD7EB001642A8 /* RFMenueView.m in Sources */,
+				9D363292229D299E001642A8 /* AdditiveAnimation.m in Sources */,
 				59B9B67F1FC50D0B00F1B745 /* Refreshh2_animation_layer.m in Sources */,
 				594911BC1FBAD792002FB7D8 /* main.m in Sources */,
 				591B937A204549E3009BB6AF /* WaterWaveView.m in Sources */,
 				594911AE1FBAD792002FB7D8 /* AppDelegate.m in Sources */,
 				591AAC962123F94A008E3FCC /* DynanicDemo.m in Sources */,
 				59B9B68B1FC517C800F1B745 /* UIView+UIView.m in Sources */,
+				9D36328E229CD956001642A8 /* PRMenueBGView.m in Sources */,
 				59225A4C211A8F300053EC99 /* FactorView.m in Sources */,
 				59B9B68E1FC519AF00F1B745 /* RaindropView.m in Sources */,
 				591EB6D7207F4E6E0004CB44 /* BasicView.m in Sources */,

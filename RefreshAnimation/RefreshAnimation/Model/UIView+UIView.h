@@ -17,4 +17,7 @@
 - (CGFloat)maxX;
 - (CGFloat)maxY;
 
+- (CGFloat)midX;
+- (CGFloat)midY;
+
 @end
