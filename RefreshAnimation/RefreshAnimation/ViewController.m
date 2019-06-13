@@ -75,8 +75,12 @@
     additiveAnimation.nameString = @"additive动画";
     additiveAnimation.type = animationType_other;
     
+    animationModel *anchorAnimation = [animationModel new];
+    anchorAnimation.classNameStr = @"AnchorAnimation";
+    anchorAnimation.nameString = @"锚点动画";
+    anchorAnimation.type = animationType_other;
     
-    [self.animationList setObject:@[animaiton1,textAnimation,factorAnimation,additiveAnimation] forKey:@"其他的"];
+    [self.animationList setObject:@[animaiton1,textAnimation,factorAnimation,additiveAnimation,anchorAnimation] forKey:@"其他的"];
     
     animationModel *dynaicAnimation = [animationModel new];
     dynaicAnimation.classNameStr = @"DynanicDemo";

@@ -33,6 +33,7 @@
 		9D36328B229CD7EB001642A8 /* RFMenueView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D36328A229CD7EB001642A8 /* RFMenueView.m */; };
 		9D36328E229CD956001642A8 /* PRMenueBGView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D36328D229CD956001642A8 /* PRMenueBGView.m */; };
 		9D363292229D299E001642A8 /* AdditiveAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D363291229D299E001642A8 /* AdditiveAnimation.m */; };
+		9D363296229E295E001642A8 /* AnchorAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D363295229E295E001642A8 /* AnchorAnimation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -87,6 +88,8 @@
 		9D36328D229CD956001642A8 /* PRMenueBGView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PRMenueBGView.m; sourceTree = "<group>"; };
 		9D363290229D299E001642A8 /* AdditiveAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AdditiveAnimation.h; sourceTree = "<group>"; };
 		9D363291229D299E001642A8 /* AdditiveAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AdditiveAnimation.m; sourceTree = "<group>"; };
+		9D363294229E295E001642A8 /* AnchorAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnchorAnimation.h; sourceTree = "<group>"; };
+		9D363295229E295E001642A8 /* AnchorAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnchorAnimation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -249,6 +252,7 @@
 		59B9B6791FC50CEF00F1B745 /* AnimationView */ = {
 			isa = PBXGroup;
 			children = (
+				9D363293229E291E001642A8 /* 锚点动画 */,
 				9D36328F229D297B001642A8 /* Additive动画 */,
 				9D363288229CD76C001642A8 /* 菜目动画 */,
 				59225A49211A8EF10053EC99 /* 翻页动画 */,
@@ -291,6 +295,15 @@
 				9D363291229D299E001642A8 /* AdditiveAnimation.m */,
 			);
 			path = "Additive动画";
+			sourceTree = "<group>";
+		};
+		9D363293229E291E001642A8 /* 锚点动画 */ = {
+			isa = PBXGroup;
+			children = (
+				9D363294229E295E001642A8 /* AnchorAnimation.h */,
+				9D363295229E295E001642A8 /* AnchorAnimation.m */,
+			);
+			path = "锚点动画";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -379,6 +392,7 @@
 				594911AE1FBAD792002FB7D8 /* AppDelegate.m in Sources */,
 				591AAC962123F94A008E3FCC /* DynanicDemo.m in Sources */,
 				59B9B68B1FC517C800F1B745 /* UIView+UIView.m in Sources */,
+				9D363296229E295E001642A8 /* AnchorAnimation.m in Sources */,
 				9D36328E229CD956001642A8 /* PRMenueBGView.m in Sources */,
 				59225A4C211A8F300053EC99 /* FactorView.m in Sources */,
 				59B9B68E1FC519AF00F1B745 /* RaindropView.m in Sources */,
